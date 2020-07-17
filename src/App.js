@@ -8,8 +8,12 @@ import Contact from './components/Contact';
 import Error from './components/Error';
 import Navigation from './components/Navigation';
 
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './components/Theme'
+
 function App() {
 	  return (
+	  	<ThemeProvider theme={theme}>
 		  <BrowserRouter>
 			  <div>
 				  <Navigation />
@@ -22,6 +26,7 @@ function App() {
 				  </Switch>
 			  </div>
 		  </BrowserRouter>
+		</ThemeProvider>
 	  );
 }
 
