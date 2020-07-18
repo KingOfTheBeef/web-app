@@ -29,7 +29,9 @@ const Navigation = () => {
                         <Button color="inherit" component={Link} to="/" style={{padding: 25}}>
                             <Typography variant="h6" className={classes.title}>Home</Typography>
                         </Button>
-
+                        <Button color="inherit" component={Link} to="/Menu" style={{padding: 25}}>
+                            <Typography variant="h6" className={classes.title}>Menu</Typography>
+                        </Button>
                         <Button color="inherit" component={Link} to="/about" style={{padding: 25}}>
                             <Typography variant="h6" className={classes.title}>About</Typography>
                         </Button>

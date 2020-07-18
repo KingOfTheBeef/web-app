@@ -7,6 +7,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Error from './components/Error';
 import Navigation from './components/Navigation';
+import Menu from './components/Menu';
 
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './components/Theme'
@@ -21,7 +22,7 @@ function App() {
 					  <Route path="/" component={Home} exact/>
 					  <Route path="/about" component={About}/>
 					  <Route path="/contact" component={Contact}/>
-					  <Route path="/about" component={About}/>
+					  <Route path="/Menu" component={Menu}/>
 					  <Route component={Error}/>
 				  </Switch>
 			  </div>
