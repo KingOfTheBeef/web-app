@@ -89,7 +89,6 @@ const tileData = [
 
 const Menu = () => {
     const classes = useStyles();
-    const cellHeight = "10%";
 
     return (
         <div className={classes.root}>

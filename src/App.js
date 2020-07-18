@@ -31,7 +31,7 @@ function App() {
 			  </BrowserRouter>
 			</ThemeProvider>
 			<div className="my-container">
-				<img src={bakerImg}/>
+				<img src={bakerImg} alt="Error"/>
 			</div>
 		</div>
 	  );
