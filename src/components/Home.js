@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../logo.svg';
 import '../App.css';
-
+import bakerImg from "../images/background.png";
 function Square(props) {
     return (
         <button className="square" style={{background: props.color}} onClick={() => {props.onClick()}}>
@@ -183,8 +183,29 @@ function calculateWinner(squares) {
 
 function HomeScreen() {
     return (
-          <div className="App">
-          <header className="App-header">
+        <div>
+            <header className="home-background" style={{backgroundImage: bakerImg}}>
+        <img src={logo} className="App-logo" alt="logo" />
+                <p>
+                I like to boogy
+            </p>
+            <Game />
+            <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+                >
+                Learn React
+            </a>
+        </header>
+        </div>
+    );
+}
+
+
+/*
+*           <header className="home-background" style={{backgroundImage: bakerImg}}>
             <img src={logo} className="App-logo" alt="logo" />
             <p>
               I like to boogy
@@ -199,13 +220,9 @@ function HomeScreen() {
               Learn React
             </a>
           </header>
-        </div>
-
-    );
-}
-
+* */
 const home = () => {
     return (HomeScreen());
-}
+};
 
 export default home;

@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden',
-        backgroundColor: theme.palette.background.paper,
     },
     gridList: {
         width: "70%",
@@ -90,13 +89,13 @@ const tileData = [
 
 const Menu = () => {
     const classes = useStyles();
-    const cellHeight = 300;
+    const cellHeight = "10%";
 
     return (
         <div className={classes.root}>
-            <GridList cellHeight={cellHeight} className={classes.gridList}>
-                <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-                    <ListSubheader component="div">December</ListSubheader>
+            <GridList cellHeight={200} cols={3} className={classes.gridList} spacing={30}>
+                <GridListTile key="Subheader" cols={3} style={{ height: 'auto' }}>
+                    <ListSubheader component="div">Bread Menu</ListSubheader>
                 </GridListTile>
                 {tileData.map((tile) => (
                     <GridListTile key={tile.img}>
