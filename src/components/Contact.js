@@ -31,7 +31,7 @@ const Contact = () => {
 
     const classes = useStyles();
     return (
-        <Container>
+        <Container maxWidth="sm">
             <div style={{padding: "1em"}}/>
             <Typography variant="h3">Contact us:</Typography>
             <br/>
