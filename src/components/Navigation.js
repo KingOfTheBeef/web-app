@@ -6,6 +6,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import logo from '../images/logo.png'
+import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -13,6 +15,8 @@ const useStyles = makeStyles((theme) => ({
     },
     menuButton: {
         marginRight: theme.spacing(2),
+        height: "5%",
+        width: "5%",
     },
     title: {
         flexGrow: 1,
@@ -26,6 +30,16 @@ const Navigation = () => {
             <div className={classes.root}>
                 <AppBar position="static">
                     <Toolbar>
+                        <IconButton
+                            edge="start"
+                            className={classes.menuButton}
+                            color="inherit"
+                            aria-label="open drawer"
+                            size="small"
+                        >
+                            <img src={logo} alt="logo" style={{width: "100%", height: "100%"}}/>
+                        </IconButton>
+
                         <Button color="inherit" component={Link} to="/" style={{padding: 25}}>
                             <Typography variant="h6" className={classes.title}>Home</Typography>
                         </Button>
