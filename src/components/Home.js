@@ -181,48 +181,17 @@ function calculateWinner(squares) {
 
 }
 
-function HomeScreen() {
+const home = () => {
     return (
         <div>
             <header className="home-background" style={{backgroundImage: bakerImg}}>
-        <img src={logo} className="App-logo" alt="logo" />
+                <img src={logo} className="App-logo" alt="logo" />
                 <p>
-                I like to boogy
-            </p>
-            <Game />
-            <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-                >
-                Learn React
-            </a>
-        </header>
+                    I like to boogy
+                </p>
+            </header>
         </div>
     );
-}
-
-
-/*
-*           <header className="home-background" style={{backgroundImage: bakerImg}}>
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              I like to boogy
-            </p>
-            <Game />
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
-* */
-const home = () => {
-    return (HomeScreen());
 };
 
 export default home;

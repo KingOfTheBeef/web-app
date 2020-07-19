@@ -8,6 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import img1 from '../images/DSC_0977.jpg'
 import img2 from '../images/DSC_0978.jpg'
 import img3 from '../images/DSC_0979.jpg'
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -29,61 +30,73 @@ const tileData = [
         img: img1,
         title: "Image 1",
         author: "author",
+        link: "/",
     },
     {
         img: img2,
         title: "Image 2",
         author: "author",
+        link: "/contact",
     },
     {
         img: img3,
         title: "Image 3",
         author: "author",
+        link: "/",
     },
     {
         img: img1,
         title: "Image 1",
         author: "author",
+        link: "/",
     },
     {
         img: img2,
         title: "Image 2",
         author: "author",
+        link: "/",
     },
     {
         img: img3,
         title: "Image 3",
         author: "author",
+        link: "/",
     },
     {
         img: img1,
         title: "Image 1",
         author: "author",
+        link: "/",
     },
     {
         img: img2,
         title: "Image 2",
         author: "author",
+        link: "/",
     },
     {
         img: img3,
         title: "Image 3",
         author: "author",
+        link: "/",
     },
     {
         img: img1,
         title: "Image 1",
         author: "author",
+        link: "/",
     },
     {
         img: img2,
         title: "Image 2",
         author: "author",
+        link: "/",
     },
     {
         img: img3,
         title: "Image 3",
         author: "author",
+        link: "/",
     },
 ];
 
@@ -97,13 +110,13 @@ const Menu = () => {
                     <ListSubheader component="div">Bread Menu</ListSubheader>
                 </GridListTile>
                 {tileData.map((tile) => (
-                    <GridListTile key={tile.img}>
-                        <img src={tile.img} alt={tile.title} />
+                    <GridListTile key={tile.img} component={Link} to={tile.link}>
+                        <img src={tile.img} alt={tile.title}/>
                         <GridListTileBar
                             title={tile.title}
                             subtitle={<span>by: {tile.author}</span>}
                             actionIcon={
-                                <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
+                                <IconButton aria-label={`info about ${tile.title}`} className={classes.icon} component={Link} to="/">
                                 </IconButton>
                             }
                         />

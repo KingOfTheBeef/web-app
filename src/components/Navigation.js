@@ -21,6 +21,11 @@ const useStyles = makeStyles((theme) => ({
     title: {
         flexGrow: 1,
     },
+    button: {
+        padding: 25,
+        maxWidth: "20%",
+        color: "inherit",
+    }
 }));
 
 const Navigation = () => {
@@ -40,18 +45,22 @@ const Navigation = () => {
                             <img src={logo} alt="logo" style={{width: "100%", height: "100%"}}/>
                         </IconButton>
 
-                        <Button color="inherit" component={Link} to="/" style={{padding: 25}}>
+                        <Button className={classes.button} component={Link} to="/">
                             <Typography variant="h6" className={classes.title}>Home</Typography>
                         </Button>
-                        <Button color="inherit" component={Link} to="/Menu" style={{padding: 25}}>
+                        <Button className={classes.button} component={Link} to="/Menu">
                             <Typography variant="h6" className={classes.title}>Menu</Typography>
                         </Button>
-                        <Button color="inherit" component={Link} to="/about" style={{padding: 25}}>
+                        <Button className={classes.button} component={Link} to="/about">
                             <Typography variant="h6" className={classes.title}>About</Typography>
                         </Button>
 
-                        <Button color="inherit" component={Link} to="/contact" style={{padding: 25}}>
+                        <Button className={classes.button} component={Link} to="/contact">
                             <Typography variant="h6" className={classes.title}>Contact</Typography>
+                        </Button>
+
+                        <Button className={classes.button} component={Link} to="/products/baguette">
+                            <Typography variant="h6" className={classes.title}>Bread Rolls</Typography>
                         </Button>
                     </Toolbar>
                 </AppBar>
