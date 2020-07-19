@@ -12,7 +12,6 @@ import Product from './components/Product';
 
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './components/Theme'
-import bakerImg from "./images/background.png";
 
 function App() {
 	  return (

@@ -2,6 +2,8 @@ import React from 'react';
 import logo from '../images/logo.png';
 import '../App.css';
 import bakerImg from "../images/background.png";
+
+/*
 function Square(props) {
     return (
         <button className="square" style={{background: props.color}} onClick={() => {props.onClick()}}>
@@ -181,6 +183,7 @@ function calculateWinner(squares) {
 
 }
 
+*/
 const home = () => {
     return (
         <div>
