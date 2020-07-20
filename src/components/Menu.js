@@ -30,31 +30,31 @@ const tileData = [
         img: img1,
         title: "Image 1",
         author: "author",
-        link: "/",
+        link: "baguette",
     },
     {
         img: img2,
         title: "Image 2",
         author: "author",
-        link: "/contact",
+        link: "roll",
     },
     {
         img: img3,
         title: "Image 3",
         author: "author",
-        link: "/",
+        link: "apple",
     },
     {
         img: img1,
         title: "Image 1",
         author: "author",
-        link: "/",
+        link: "bike",
     },
     {
         img: img2,
         title: "Image 2",
         author: "author",
-        link: "/",
+        link: "bear",
     },
     {
         img: img3,
@@ -110,7 +110,7 @@ const Menu = () => {
                     <ListSubheader component="div">Bread Menu</ListSubheader>
                 </GridListTile>
                 {tileData.map((tile) => (
-                    <GridListTile key={tile.img} component={Link} to={tile.link}>
+                    <GridListTile key={tile.img} component={Link} to={"/products/" + tile.link}>
                         <img src={tile.img} alt={tile.title}/>
                         <GridListTileBar
                             title={tile.title}

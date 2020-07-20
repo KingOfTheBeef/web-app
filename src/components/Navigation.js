@@ -28,8 +28,40 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+const navigations = [
+    {
+        name: "Home",
+        link: "/"
+    },
+    {
+        name: "Menu",
+        link: "/Menu"
+    },
+    {
+        name: "About",
+        link: "/About"
+    },
+    {
+        name: "Contact",
+        link: "/contact"
+    },
+];
+
+function NavigationButton(name, link){
+    const classes = useStyles();
+        return(
+            <Button className={classes.button} component={Link} to={link}>
+                <Typography variant="h6" className={classes.title}>{name}</Typography>
+            </Button>
+        )
+}
+
 const Navigation = () => {
     const classes = useStyles();
+    const navigationButtons = [];
+    for (let i = 0; i < navigations.length; i++) {
+        navigationButtons.push(NavigationButton(navigations[i].name, navigations[i].link))
+    }
     return (
         <div>
             <div className={classes.root}>
@@ -44,24 +76,7 @@ const Navigation = () => {
                         >
                             <img src={logo} alt="logo" style={{width: "100%", height: "100%"}}/>
                         </IconButton>
-
-                        <Button className={classes.button} component={Link} to="/">
-                            <Typography variant="h6" className={classes.title}>Home</Typography>
-                        </Button>
-                        <Button className={classes.button} component={Link} to="/Menu">
-                            <Typography variant="h6" className={classes.title}>Menu</Typography>
-                        </Button>
-                        <Button className={classes.button} component={Link} to="/about">
-                            <Typography variant="h6" className={classes.title}>About</Typography>
-                        </Button>
-
-                        <Button className={classes.button} component={Link} to="/contact">
-                            <Typography variant="h6" className={classes.title}>Contact</Typography>
-                        </Button>
-
-                        <Button className={classes.button} component={Link} to="/products/baguette">
-                            <Typography variant="h6" className={classes.title}>Bread Rolls</Typography>
-                        </Button>
+                        {navigationButtons}
                     </Toolbar>
                 </AppBar>
             </div>
