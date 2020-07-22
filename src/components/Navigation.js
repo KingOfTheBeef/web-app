@@ -34,12 +34,16 @@ const navigations = [
         link: "/"
     },
     {
+        name: "About",
+        link: "/About"
+    },
+    {
         name: "Menu",
         link: "/Menu"
     },
     {
-        name: "About",
-        link: "/About"
+        name: "Custom Bake",
+        link: "/Custom"
     },
     {
         name: "Contact",

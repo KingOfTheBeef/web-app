@@ -12,6 +12,7 @@ import Product from './components/Product';
 
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './components/Theme'
+import Custom from "./components/Custom";
 
 function App() {
 	  return (
@@ -26,10 +27,9 @@ function App() {
 						  <Route path="/" component={Home} exact/>
 						  <Route path="/about" component={About}/>
 						  <Route path="/contact" component={Contact}/>
-						  <Route path="/Menu" component={Menu}/>
-
+						  <Route path="/menu" component={Menu}/>
+						  <Route path="/custom" component={Custom}/>
 						  <Route path={'/products/:product_name'} exact component={Product} />
-
 						  <Route component={Error}/>
 					  </Switch>
 				  </div>

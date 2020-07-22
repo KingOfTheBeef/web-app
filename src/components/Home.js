@@ -2,6 +2,10 @@ import React from 'react';
 import logo from '../images/logo.png';
 import '../App.css';
 import bakerImg from "../images/background.png";
+import baker from "../images/baker.jpg";
+import Card from "@material-ui/core/Card";
+import {makeStyles} from "@material-ui/core/styles";
+import Slideshow from './Slideshow';
 
 /*
 function Square(props) {
@@ -184,10 +188,42 @@ function calculateWinner(squares) {
 }
 
 */
-const home = () => {
+
+const useStyles = makeStyles({
+    root: {
+        paddingLeft: "20px",
+        paddingRight: "20px",
+    },
+    jobTitle: {
+        fontSize: "13px",
+        color: "grey",
+    },
+    media: {
+        height: 0,
+        paddingTop: '56.25%', // 16:9
+        margin: "10px",
+    },
+    contactCard: {
+        height: "500px",
+        width: "80%",
+        margin: "18px",
+    }
+});
+
+function changeImage() {
+
+}
+
+function setSlideShow() {
+    window.setInterval("changeImage()", 5000);
+}
+
+const Home = () => {
+    const classes = useStyles();
     return (
         <div>
             <header className="home-background" style={{backgroundImage: bakerImg}}>
+                <Slideshow/>
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>
                     I like to boogy
@@ -197,4 +233,4 @@ const home = () => {
     );
 };
 
-export default home;
+export default Home;

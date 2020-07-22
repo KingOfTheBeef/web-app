@@ -8,8 +8,8 @@ const dictionary ={
         desc: "The apple dapple is the coolest apple dapple in the world"
     },
     "bike" : {
-        name: "Apple-Dapple",
-        desc: "The apple dapple is the coolest apple dapple in the world"
+        name: "Bike",
+        desc: "A ride my bike ever'day"
     }
 
 };
